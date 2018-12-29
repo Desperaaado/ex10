@@ -29,9 +29,8 @@ def parser_args():
     )
     return parser.parse_args()
 
-def sorting(lines, settings): 
+def sorting(lines, settings):
     dict_lines = {}
-    index = 0
     
     for line in lines:
         a_line = line
@@ -44,7 +43,6 @@ def sorting(lines, settings):
         dict_lines.update({a_line: line})
 
     the_lines = list(dict_lines.keys())
-    print(dict_lines.keys())
     the_lines.sort()
     sorted_lines = []
 
