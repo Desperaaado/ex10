@@ -29,7 +29,7 @@ def parser_args():
     )
     return parser.parse_args()
 
-def sorting(lines, settings):
+def sorting(lines, settings): 
     dict_lines = {}
     index = 0
     
@@ -46,7 +46,7 @@ def sorting(lines, settings):
     the_lines = list(dict_lines.keys())
     the_lines.sort()
     sorted_lines = []
-    
+
     for index in the_lines:
         sorted_lines.append(dict_lines[index])
 
