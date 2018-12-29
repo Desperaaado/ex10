@@ -44,6 +44,7 @@ def sorting(lines, settings):
         dict_lines.update({a_line: line})
 
     the_lines = list(dict_lines.keys())
+    print(dict_lines.keys())
     the_lines.sort()
     sorted_lines = []
 
