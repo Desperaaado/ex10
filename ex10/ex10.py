@@ -41,19 +41,14 @@ def sorting(lines, settings):
         if '-g' in settings:
             a_line = float(line)
 
-        dict_lines.update({a_line: index})
-        index += 1
+        dict_lines.update({a_line: line})
 
     the_lines = list(dict_lines.keys())
     the_lines.sort()
-
-    sorted_lines_keys = []
-    for line_content in the_lines:
-        sorted_lines_keys.append(dict_lines[line_content])
-
     sorted_lines = []
-    for index in sorted_lines_keys:
-        sorted_lines.append(lines[index])
+    
+    for index in the_lines:
+        sorted_lines.append(dict_lines[index])
 
     if '-r' in settings:
         final_lines = sorted_lines[::-1]
